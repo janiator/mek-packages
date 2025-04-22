@@ -48,7 +48,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 26 //See if this can be lower
+        minSdkVersion 26
     }
 
     dependencies {
@@ -70,10 +70,9 @@ android {
 }
 
 dependencies {
-    // core Terminal SDK v4.3.1 WITHOUT taptopay
-    implementation("com.stripe:stripeterminal-core:4.3.1")
-    // handoff module
-    implementation "com.stripe:stripeterminal-handoffclient:4.3.1"
+    api("com.stripe:stripeterminal-taptopay:4.1.0")
+    api("com.stripe:stripeterminal-core:4.3.1")
+    api("com.stripe:stripeterminal-handoffclient:4.3.1")
 }
 
 spotless {
