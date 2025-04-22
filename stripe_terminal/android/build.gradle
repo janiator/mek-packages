@@ -70,8 +70,12 @@ android {
 }
 
 dependencies {
-    implementation "com.stripe:stripeterminal-taptopay:4.1.0"
+    //implementation "com.stripe:stripeterminal-taptopay:4.1.0"
+    implementation("com.stripe:stripeterminal-core:4.3.1") {
+        exclude group: "com.stripe", module: "stripeterminal-taptopay"
+    }
     implementation "com.stripe:stripeterminal-core:4.1.0"
+    implementation "com.stripe:stripeterminal-handoffclient:4.3.1"
 }
 
 spotless {
